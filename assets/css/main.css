@@ -843,6 +843,14 @@ section,
   transition: all 0.3s
 }
 
+.services button a{
+  color: #ffffff;
+}
+
+.services button a:hover{
+  color: var(--contrast-color);
+}
+
 .services  button:hover{
   color: var(--contrast-color);
   background-color: #142129;
