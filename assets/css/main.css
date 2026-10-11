@@ -865,6 +865,8 @@ section,
   transition: all 0.3s
 }
 
+
+
 .about .content button:hover{
   color: var(--contrast-color);
   background-color: #142129;
@@ -1088,7 +1090,7 @@ section,
 
 .services.more {
   background: linear-gradient(rgba(18, 24, 30, 0.85), rgba(18, 24, 30, 0.85)), 
-              url('/assets/img/hr_tv.webp') center center no-repeat;
+              url('../img/hr_tv.webp') center center no-repeat;
   background-size: cover;
   background-attachment: fixed; 
 }
@@ -2718,4 +2720,191 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+/*--------------------------------------------------------------
+# Responsive fixes
+--------------------------------------------------------------*/
+.page-title h2 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.about .content button + button {
+  margin-left: 12px;
+}
+
+@media (min-width: 992px) {
+  .services .profile-img img {
+    width: 120%;
+  }
+}
+
+/* Check icons inside the white cards were being overridden by the
+   ".about/.services .content ul i" rules (blue icon on a blue circle) */
+.coaching-card .content ul li i,
+.qual-card .content ul li i {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+@media (max-width: 991px) {
+  .about .profile-img img {
+    margin-left: 20px;
+    max-width: calc(100% - 20px);
+  }
+
+  .services .profile-img img {
+    margin: 24px 0 0 0;
+    max-width: 100%;
+  }
+
+  .about .content h3,
+  .services .content h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .services.more {
+    background-attachment: scroll;
+  }
+
+  .card {
+    height: 240px;
+    width: 300px;
+    flex-basis: 300px;
+  }
+
+  .carousel .card img {
+    height: 240px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-title {
+    padding: 120px 0 60px 0;
+  }
+
+  .page-title h2 {
+    font-size: 40px;
+  }
+
+  .section-title {
+    padding-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .section-title u {
+    text-underline-offset: 12px;
+  }
+
+  .about .content h3,
+  .services .content h3 {
+    font-size: 26px;
+  }
+
+  .about .content button + button {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .about .content button,
+  .about .content button:hover,
+  .services .content button,
+  .services .content button:hover {
+    max-width: 100%;
+    height: auto;
+    min-height: 50px;
+    padding: 12px 20px;
+  }
+
+  .timeline ul {
+    --col-gap: 1rem;
+    width: 94%;
+  }
+
+  .timeline ul li {
+    --inlineP: 1rem;
+  }
+
+
+
+  .testimonial-single {
+    padding: 32px 20px;
+  }
+
+  .footer h3 {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group {
+    animation: none;
+  }
+}
+
+.services button {
+  position: relative;
+}
+
+.services button a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.services .profile-img .highlight-img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+@media (min-width: 992px) {
+  .services .profile-img {
+    padding-left: 56px;
+  }
+}
+
+.services button a {
+  color: #142129;
+}
+
+.services button:hover a {
+  color: #ffffff;
+}
+
+.services .content button a {
+  color: #ffffff;
+}
+
+.services .content button + button {
+  margin-left: 12px;
+}
+
+.services .content button a i.bi-instagram {
+  margin-right: 4px;
+}
+
+@media (max-width: 575px) {
+  .services .content button + button {
+    margin-left: 0;
+    margin-top: 12px;
+  }
 }
